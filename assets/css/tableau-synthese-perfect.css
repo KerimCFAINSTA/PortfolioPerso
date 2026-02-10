@@ -1,0 +1,279 @@
+/* ================================================
+   CORRECTION TABLEAU DE SYNTHÈSE - VERSION PARFAITE
+   ================================================ */
+
+@media (max-width: 768px) {
+    /* SECTION TABLEAU - Espacement correct */
+    #tableau {
+        padding: 80px 0 50px 0 !important;
+        margin-top: 0 !important;
+    }
+
+    #tableau .container {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+
+    /* TITRE DE SECTION - Plus d'espace */
+    #tableau .section-title {
+        margin-bottom: 2rem !important;
+        padding: 0 1rem !important;
+        font-size: 1.6rem !important;
+    }
+
+    /* CONTAINER DU TABLEAU - Full width */
+    .tableau-container {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: touch !important;
+        background: var(--card-bg) !important;
+        position: relative !important;
+    }
+
+    /* TABLE - Largeur optimale */
+    table {
+        width: auto !important;
+        min-width: 700px !important;
+        max-width: none !important;
+        border-collapse: separate !important;
+        border-spacing: 0 !important;
+        margin: 0 !important;
+        display: table !important;
+        table-layout: auto !important;
+    }
+
+    /* EN-TÊTE DU TABLEAU */
+    table thead {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 20 !important;
+        background: linear-gradient(135deg, rgba(0, 210, 255, 0.3), rgba(0, 255, 234, 0.3)) !important;
+    }
+
+    table thead tr {
+        display: table-row !important;
+    }
+
+    table th {
+        padding: 1rem 0.8rem !important;
+        text-align: left !important;
+        font-family: 'Orbitron', sans-serif !important;
+        color: var(--primary) !important;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        border-bottom: 2px solid var(--primary) !important;
+        white-space: nowrap !important;
+        background: linear-gradient(135deg, rgba(0, 210, 255, 0.3), rgba(0, 255, 234, 0.3)) !important;
+        position: sticky !important;
+        top: 0 !important;
+        vertical-align: middle !important;
+    }
+
+    /* PREMIÈRE COLONNE STICKY - COMPÉTENCE */
+    table th:first-child,
+    table td:first-child {
+        position: sticky !important;
+        left: 0 !important;
+        z-index: 15 !important;
+        background: var(--darker) !important;
+        box-shadow: 3px 0 8px rgba(0, 0, 0, 0.5) !important;
+        min-width: 180px !important;
+        max-width: 180px !important;
+        width: 180px !important;
+    }
+
+    table th:first-child {
+        z-index: 25 !important;
+        background: linear-gradient(135deg, rgba(0, 210, 255, 0.4), rgba(0, 255, 234, 0.4)) !important;
+    }
+
+    /* COLONNE NIVEAU */
+    table th:nth-child(2),
+    table td:nth-child(2) {
+        min-width: 140px !important;
+        width: 140px !important;
+    }
+
+    /* COLONNE PROJET ASSOCIÉ */
+    table th:nth-child(3),
+    table td:nth-child(3) {
+        min-width: 220px !important;
+        width: 220px !important;
+    }
+
+    /* COLONNE VALIDATION */
+    table th:nth-child(4),
+    table td:nth-child(4) {
+        min-width: 100px !important;
+        width: 100px !important;
+        text-align: center !important;
+    }
+
+    /* CORPS DU TABLEAU */
+    table tbody {
+        display: table-row-group !important;
+    }
+
+    table tbody tr {
+        display: table-row !important;
+        transition: all 0.3s !important;
+        border-bottom: 1px solid rgba(0, 210, 255, 0.2) !important;
+    }
+
+    table tbody tr:hover {
+        background: rgba(0, 210, 255, 0.15) !important;
+    }
+
+    /* CELLULES DU TABLEAU */
+    table td {
+        padding: 1rem 0.8rem !important;
+        color: var(--gray) !important;
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        border-bottom: 1px solid rgba(0, 210, 255, 0.2) !important;
+        vertical-align: middle !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
+    }
+
+    /* Texte de la première colonne - Bien visible */
+    table td:first-child {
+        font-weight: 600 !important;
+        color: var(--white) !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Niveau - Style spécial */
+    table td:nth-child(2) {
+        font-family: 'Orbitron', sans-serif !important;
+        font-size: 0.8rem !important;
+        color: var(--secondary) !important;
+        white-space: nowrap !important;
+    }
+
+    /* Projets associés */
+    table td:nth-child(3) {
+        font-size: 0.8rem !important;
+        line-height: 1.6 !important;
+        white-space: normal !important;
+    }
+
+    /* Icônes de validation */
+    table td:nth-child(4) {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    /* Styles pour les validations */
+    table td:nth-child(4)::before {
+        content: attr(data-validation);
+    }
+
+    /* BARRE DE SCROLL VISIBLE */
+    .tableau-container::-webkit-scrollbar {
+        height: 10px !important;
+        background: rgba(0, 210, 255, 0.1) !important;
+    }
+
+    .tableau-container::-webkit-scrollbar-track {
+        background: rgba(0, 210, 255, 0.1) !important;
+        border-radius: 10px !important;
+    }
+
+    .tableau-container::-webkit-scrollbar-thumb {
+        background: var(--primary) !important;
+        border-radius: 10px !important;
+        box-shadow: 0 0 10px rgba(0, 210, 255, 0.5) !important;
+    }
+
+    .tableau-container::-webkit-scrollbar-thumb:hover {
+        background: var(--secondary) !important;
+    }
+
+    /* INDICATEUR DE SCROLL */
+    .tableau-container::after {
+        content: '← Faites défiler →';
+        position: absolute;
+        bottom: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        background: rgba(0, 210, 255, 0.8);
+        color: var(--darker);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 600;
+        pointer-events: none;
+        z-index: 30;
+        animation: fadeInOut 3s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+    }
+
+    /* Masquer l'indicateur après 10s */
+    .tableau-container.scrolled::after {
+        display: none;
+    }
+
+    /* ALTERNANCE DE COULEURS DES LIGNES */
+    table tbody tr:nth-child(odd) {
+        background: rgba(0, 210, 255, 0.03) !important;
+    }
+
+    table tbody tr:nth-child(even) {
+        background: rgba(0, 255, 234, 0.03) !important;
+    }
+}
+
+/* TRÈS PETITS ÉCRANS (< 380px) */
+@media (max-width: 380px) {
+    table th:first-child,
+    table td:first-child {
+        min-width: 150px !important;
+        max-width: 150px !important;
+        width: 150px !important;
+    }
+
+    table th {
+        font-size: 0.75rem !important;
+        padding: 0.8rem 0.6rem !important;
+    }
+
+    table td {
+        font-size: 0.75rem !important;
+        padding: 0.8rem 0.6rem !important;
+    }
+
+    table td:first-child {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* SCRIPTS JS POUR MASQUER L'INDICATEUR */
+/* Ajoute ce script dans ton HTML :
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tableauContainer = document.querySelector('.tableau-container');
+    if (tableauContainer) {
+        tableauContainer.addEventListener('scroll', function() {
+            this.classList.add('scrolled');
+        });
+        
+        // Auto-masquer après 10 secondes
+        setTimeout(() => {
+            tableauContainer.classList.add('scrolled');
+        }, 10000);
+    }
+});
+</script>
+*/

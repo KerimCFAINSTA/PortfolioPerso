@@ -1,0 +1,333 @@
+/* ================================================
+   SECTION VEILLE TECHNOLOGIQUE JAVA
+   Design intégré au style cyberpunk existant
+   ================================================ */
+
+/* Introduction de la veille */
+.veille-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.veille-intro .lead {
+    font-size: 1.2rem;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+/* Grille de cartes Java - 3 colonnes desktop, 1 colonne mobile */
+.veille-grid-java {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Carte individuelle */
+.veille-card-java {
+    background: var(--card-bg);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet hover élégant */
+.veille-card-java:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.3),
+                0 0 60px rgba(0, 255, 234, 0.2);
+}
+
+.veille-card-java::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.veille-card-java:hover::before {
+    transform: scaleX(1);
+}
+
+/* Badge de catégorie */
+.card-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.badge-performance {
+    background: linear-gradient(135deg, rgba(255, 87, 51, 0.2), rgba(255, 159, 51, 0.2));
+    color: #ff9f33;
+    border: 1px solid #ff9f33;
+}
+
+.badge-cloud {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(0, 122, 255, 0.2));
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.badge-language {
+    background: linear-gradient(135deg, rgba(0, 255, 234, 0.2), rgba(52, 199, 89, 0.2));
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+
+/* Titre de la carte */
+.card-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+/* Contenu de la carte */
+.card-content {
+    margin: 1.5rem 0;
+}
+
+.card-why,
+.card-impact {
+    margin-bottom: 1.5rem;
+}
+
+.card-why h4,
+.card-impact h4 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.card-why p {
+    color: var(--gray);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.card-impact ul {
+    list-style: none;
+    padding: 0;
+    color: var(--gray);
+}
+
+.card-impact ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+    position: relative;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.card-impact ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.card-impact ul li strong {
+    color: var(--white);
+}
+
+/* Source en bas de carte */
+.card-source {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 210, 255, 0.2);
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 1.5rem;
+}
+
+.source-icon {
+    font-size: 1.2rem;
+}
+
+.card-source strong {
+    color: var(--primary);
+}
+
+/* Section Sources de veille */
+.veille-sources {
+    background: var(--card-bg);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.veille-sources h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sources-list li {
+    margin-bottom: 0.8rem;
+}
+
+.sources-list a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.sources-list a:hover {
+    color: var(--primary);
+    transform: translateX(5px);
+}
+
+.sources-list a strong {
+    color: var(--white);
+}
+
+/* Footer avec résultat concret */
+.veille-footer {
+    margin-top: 2rem;
+}
+
+.result-card {
+    background: linear-gradient(135deg, 
+        rgba(0, 210, 255, 0.1), 
+        rgba(0, 255, 234, 0.1));
+    border: 2px solid var(--secondary);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.result-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.result-card p {
+    color: var(--gray);
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.result-card strong {
+    color: var(--white);
+}
+
+/* ================================================
+   RESPONSIVE - MOBILE FIRST
+   ================================================ */
+
+/* Tablettes (max 768px) */
+@media (max-width: 768px) {
+    .veille-grid-java {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .veille-intro .lead {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .veille-card-java {
+        padding: 1.5rem;
+    }
+
+    .sources-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .veille-sources {
+        padding: 1.5rem;
+    }
+
+    .result-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile (max 480px) */
+@media (max-width: 480px) {
+    .veille-grid-java {
+        gap: 1.2rem;
+    }
+
+    .veille-card-java {
+        padding: 1.2rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-why h4,
+    .card-impact h4 {
+        font-size: 1rem;
+    }
+
+    .card-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .veille-sources h3 {
+        font-size: 1.2rem;
+    }
+
+    .result-card h4 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Assurer que les longs mots ne cassent pas le layout mobile */
+@media (max-width: 480px) {
+    .card-title,
+    .card-why p,
+    .card-impact ul li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}

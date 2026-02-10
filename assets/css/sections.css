@@ -1,0 +1,516 @@
+/* ================================================
+   SECTIONS PRINCIPALES
+   ================================================ */
+
+/* HERO / ACCUEIL */
+#accueil {
+    background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-shadow: var(--neon-glow);
+    margin-bottom: 1rem;
+}
+
+.hero-text .description {
+    font-size: 1.3rem;
+    color: var(--gray);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.hero-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-placeholder {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(0, 255, 234, 0.2));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--primary);
+    box-shadow: var(--neon-glow);
+}
+
+/* À PROPOS */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--gray);
+}
+
+.highlight-box {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    margin: 2rem 0;
+}
+
+.highlight-box h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ENTREPRISE */
+.entreprise-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.entreprise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.entreprise-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.entreprise-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+}
+
+.entreprise-card-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.entreprise-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.entreprise-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.entreprise-card ul li {
+    padding: 0.5rem 0;
+    color: var(--gray);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.entreprise-card ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* BTS SIO */
+.bts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.bts-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s;
+}
+
+.bts-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+}
+
+.bts-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.bts-card p {
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* CV */
+.cv-container {
+    text-align: center;
+}
+
+.cv-preview {
+    margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+
+/* PARCOURS / TIMELINE */
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: var(--primary);
+}
+
+.timeline-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item .date {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.timeline-item p {
+    color: var(--gray);
+}
+
+/* COMPÉTENCES */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+}
+
+.skill-category h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(0, 255, 234, 0.2));
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 20px;
+    border: 1px solid var(--primary);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: var(--primary);
+    color: var(--darker);
+    transform: scale(1.05);
+}
+
+/* VEILLE TECHNOLOGIQUE */
+.veille-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+}
+
+.veille-intro .lead {
+    font-size: 1.2rem;
+    color: var(--gray);
+    line-height: 1.8;
+}
+
+.veille-theme {
+    background: var(--card-bg);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.theme-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.theme-icon {
+    font-size: 3rem;
+}
+
+.theme-header h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.veille-card {
+    background: rgba(0, 210, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--primary);
+}
+
+.veille-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.veille-card.highlight {
+    border: 2px solid var(--secondary);
+    background: rgba(0, 255, 234, 0.05);
+}
+
+.veille-card ul {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    color: var(--gray);
+}
+
+.veille-sources {
+    background: var(--card-bg);
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.veille-sources h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.sources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sources-list {
+    list-style: none;
+}
+
+.sources-list li {
+    margin-bottom: 0.8rem;
+}
+
+.sources-list a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sources-list a:hover {
+    color: var(--primary);
+}
+
+/* TABLEAU DE SYNTHÈSE */
+.tableau-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table thead {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(0, 255, 234, 0.2));
+}
+
+table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+table td {
+    padding: 1.2rem 1.5rem;
+    color: var(--gray);
+    border-bottom: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+table tbody tr {
+    transition: all 0.3s;
+}
+
+table tbody tr:hover {
+    background: rgba(0, 210, 255, 0.1);
+}
+
+/* CONTACT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.contact-form {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 210, 255, 0.05);
+    border: 1px solid var(--primary);
+    border-radius: 10px;
+    color: var(--white);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-item {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--primary);
+}
+
+.contact-item h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.contact-item a {
+    color: var(--gray);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--primary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darker);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+}

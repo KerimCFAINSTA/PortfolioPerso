@@ -1,0 +1,248 @@
+/* ================================================
+   FIXES MOBILE SUPPLÉMENTAIRES
+   ================================================ */
+
+/* Empêcher tout débordement horizontal */
+* {
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+}
+
+/* Fix pour les longues URL et textes */
+p, li, span, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* Fix pour les codes et exemples */
+pre, code {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Fix pour les tableaux */
+.tableau-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+/* Fix pour les images dans les cartes */
+.project-image,
+.entreprise-card-icon,
+.theme-icon {
+    flex-shrink: 0;
+}
+
+/* Fix pour la navigation sur petits écrans */
+@media (max-width: 768px) {
+    nav {
+        width: 100vw;
+        left: 0;
+        right: 0;
+    }
+
+    nav ul {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    /* Fix pour les sections qui débordent */
+    section {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Fix pour les cartes de veille avec code */
+    .veille-card pre,
+    .veille-card code {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        overflow-x: auto;
+    }
+
+    /* Fix pour les listes dans les cartes */
+    .veille-card ul,
+    .entreprise-card ul {
+        padding-left: 1.2rem;
+    }
+
+    .veille-card ul li,
+    .entreprise-card ul li {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Fix pour les titres longs */
+    h1, h2, h3, h4, h5, h6 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+
+    /* Fix pour le hero content */
+    .hero-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero-text .description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Fix pour les modales sur mobile */
+    .modal.active {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: calc(100vw - 1rem);
+        margin: 0.5rem;
+    }
+
+    .modal-section p,
+    .modal-section ul li {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Fix pour les tech tags qui débordent */
+    .modal-tech-stack,
+    .skill-category {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .modal-tech-tag,
+    .skill-tag {
+        margin: 0.2rem;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    /* Fix pour les resource links */
+    .resource-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .resource-link {
+        width: 100%;
+        text-align: center;
+        font-size: 0.85rem;
+        padding: 0.7rem 1rem;
+    }
+
+    /* Fix pour les grilles qui débordent */
+    .projects-grid,
+    .skills-grid,
+    .entreprise-grid,
+    .bts-grid,
+    .veille-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    /* Fix pour le formulaire contact */
+    .contact-form,
+    .contact-info {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Fix pour le CV iframe */
+    .cv-preview {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cv-preview iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+    }
+
+    /* Fix pour les social links */
+    .social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    /* Fix pour le footer */
+    footer {
+        width: 100%;
+        max-width: 100vw;
+        padding: 1.5rem 15px;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Réductions supplémentaires pour très petits écrans */
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 0.65rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .entreprise-card,
+    .bts-card,
+    .project-card {
+        padding: 1.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
